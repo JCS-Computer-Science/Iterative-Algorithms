@@ -12,19 +12,13 @@ const sortTestArray = Array.from({ length: sortTestArraySize }, () =>
 console.log(`Sort Test Array: \n${sortTestArray}\n`);
 
 let insertionResult = insertionSort([...sortTestArray]);
-console.log(
-	`Insertion Sort: \n${insertionResult.result}\nLoops: ${insertionResult.loops}\n`
-);
+console.log(`Insertion Sort: \n${insertionResult}`);
 
 let selectionResult = selectionSort([...sortTestArray]);
-console.log(
-	`Selection Sort: \n${selectionResult.result}\nLoops: ${selectionResult.loops}\n`
-);
+console.log(`Selection Sort: \n${selectionResult}`);
 
 let bubbleResult = bubbleSort([...sortTestArray]);
-console.log(
-	`Bubble Sort: \n${bubbleResult.result}\nLoops: ${bubbleResult.loops}\n`
-);
+console.log(`Bubble Sort: \n${bubbleResult}`);
 
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
@@ -33,20 +27,24 @@ const searchTestArray = Array.from(
 	{ length: searchTestArraySize },
 	(v, i) => i * 2 + 1
 );
-const searchTestAnswer = Math.floor(Math.random() * searchTestArraySize);
+const searchTestAnswer = Math.floor(
+	Math.random() * searchTestArraySize
+);
 const searchTestTerm = searchTestArray[searchTestAnswer];
 console.log(`Search Test Array: \n${searchTestArray}`);
 console.log(`Searching for ${searchTestTerm}`);
 console.log(`Result should be ${searchTestAnswer}\n`);
 
 console.log("Linear Search:");
-let linearSearchResults = linearSearch([...searchTestArray], searchTestTerm);
-console.log(
-	`Result: ${linearSearchResults.index} Reads: ${linearSearchResults.reads}\n`
+let linearSearchResults = linearSearch(
+	[...searchTestArray],
+	searchTestTerm
 );
+console.log(`Result: ${linearSearchResults}`);
 
 console.log("Binary Search:");
-let binarySearchResults = binarySearch([...searchTestArray], searchTestTerm);
-console.log(
-	`Result: ${binarySearchResults.index} Reads: ${binarySearchResults.reads}\n`
+let binarySearchResults = binarySearch(
+	[...searchTestArray],
+	searchTestTerm
 );
+console.log(`Result: ${binarySearchResults}`);

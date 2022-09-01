@@ -1,14 +1,12 @@
 function linearSearch(array, searchTerm) {
-	let reads = 0;
-	let index = 0;
-	//search for the searchTerm here, you must call "reads++"
-	//any time you check the value of an element
-
 	/*
 	 ** Check each element from start to finish
+	 ** until you find an element that matches the search term
+	 **
+	 ** Return the index of the found element
 	 */
 
-	return { index: index, reads: reads };
+	return null;
 }
 
 module.exports = linearSearch;

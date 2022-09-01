@@ -1,7 +1,4 @@
 function bubbleSort(array) {
-	let loops = 0;
-	//sort the array here, you must call "loops++"
-	//inside any loops (including nested loops)
 	/*
     ** Compare the first two elements and swap if necessary.
     ** Then compare the second and third elements and swap if
@@ -12,7 +9,7 @@ function bubbleSort(array) {
     ** cycle without needing any swaps
     */
 
-	return { result: array, loops: loops };
+	return array;
 }
 
 module.exports = bubbleSort;
